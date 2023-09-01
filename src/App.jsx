@@ -1,7 +1,7 @@
 
 import "./App.css";
 import { useState } from "react";
-import AppRoutes from "./routes/routes";
+import AppRoutes from "./routes/AppRoutes";
 import Header from "./layouts/Header";
 import useApiData from "./hooks/ApiHandler";
 
