@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-color: #001c31;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.App {
+  min-width: 50vw;
+  background: url("/bg.png");
+  background-size: contain;
+  box-shadow: 0 1rem 3rem #114a95b5 !important;
+  padding: 1rem !important;
+  border-radius: 15px;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.chest-img {
+  width: 50%;
+}
+.order {
+  position: absolute;
+  top: 50%;
+  right: 40%;
+  text-shadow: 0px 2px 4px #000;
+  color: white;
+}
+.navbar {
+}
+.link {
+  color: #61dafbaa !important;
+  transition: .1s ease-out;
+}
+.active,
+.active:hover {
+  color: #fff !important;
+}
+@media screen and (max-width: 768px) {
+  .chest-img {
+    width: 100% !important;
+  }
+  .order {
+    right: 20% !important;
+    font-size: 12px;
+  }
+}
+.created-by {
+  font-size: 11px;
+  font-family: 'Poppins', sans-serif;
+  color: #ace7ffba !important;
+  letter-spacing: 2px;
+  transition: .1s ease-out;
+}
+.created-by:hover{
+  color: #fff !important;
+  letter-spacing: 2.1px;
+}
+.content {
+  background: #e7e7e726;
+  padding: 1rem;
+  border-radius: 15px;
+}
+.btn-cr {
+  background: url("/button.png");
+  background-size: cover;
+  color: #5f3b03;
+}
+.btn-cr:active {
+  scale: 0.95;
+}
+.player-detail {
+  font-size: 14px;
+  background: #2b2b2b61;
+  border-radius: 10px;
+  position: relative;
+  padding: 0.5rem;
+  box-shadow: 1px 1px #d3d3d347;
+}
+.arena-image {
+  position: absolute;
+  left: 0;
+  top: -15px;
+  width: 50px;
+}
+.details {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 6fr 6fr;
+}
+.arena p {
+  margin-left: 40px !important;
+}
+.stats {
+  background-color: #eaedff;
+  border-radius: 10px !important;
+  padding: 0.8rem;
+  box-shadow: 1px 2px #d3d3d347;
+}
+.grid-stat {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 6fr 6fr;
+  background-color: #eaedff;
+}
+.stat-label {
+  color: #093eda;
+  font-size: 9px;
+}
+.stat-input {
+  background-color: #c3c5dc !important;
+  box-shadow: 1px 1px #67676766;
+  border-radius: 8px;
+  color: whitesmoke;
+  padding-left: .5rem;
+  -webkit-text-stroke: .7px black;
+}
+.chest{
+  transition: .1s ease-out;
+}
+.chest:hover{
+  scale: 1.05;
+}
+.link:active,.link:hover{
+  scale: 1.05;
+}
