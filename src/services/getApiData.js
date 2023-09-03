@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const getApiData = async (playerTag) => {
+const getApiData = async (playerTag,setLoading) => {
+  console.log(encodeURIComponent(
+    playerTag
+  ));
   const chestUrl = `${import.meta.env.VITE_API_URL}/api/upcomingchests?tag=${encodeURIComponent(
     playerTag
   )}`;
@@ -13,6 +16,8 @@ const getApiData = async (playerTag) => {
       axios.get(chestUrl),
       axios.get(profileUrl),
     ]);
+    
+    setLoading(false);
 
     return { chestResponse, profileResponse };
   } catch (error) {

@@ -1,14 +1,15 @@
 
 import "./App.css";
 import { useState } from "react";
-import AppRoutes from "./routes/AppRoutes";
+import AppRoutes from "./router/AppRoutes";
 import Header from "./layouts/Header";
 import useApiData from "./hooks/ApiHandler";
-
+import "./assets/loader.css";
 function App() {
   const [playerTag, setPlayerTag] = useState(
     localStorage.getItem("tagname") || ""
   );
+  const [isloading, setLoading] = useState(true);
 
   const {
     profileData,
@@ -16,13 +17,13 @@ function App() {
     error,
     success,
     fetchApiData,
-  } = useApiData(playerTag); // Use the hook
+  } = useApiData(playerTag,setLoading); // Use the hook
 
   return (
     <div className="App card card-body" >
       <Header></Header>
       <main>
-        <hr className="text-white" />
+        { isloading ? <div className="loader my-3"></div> : <hr className="text-white"/> }
         <AppRoutes
           fetchApiData={fetchApiData}
           chestData={chestData}

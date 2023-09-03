@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import getApiData from "../services/getApiData";
 
-const useApiData = (playerTag) => {
+const useApiData = (playerTag,setLoading) => {
   const [profileData, setProfileData] = useState(null);
   const [chestData, setChestData] = useState(null);
   const [error, setError] = useState(null);
@@ -18,7 +18,7 @@ const useApiData = (playerTag) => {
     }
 
     try {
-      const { chestResponse, profileResponse } = await getApiData(playerTag);
+      const { chestResponse, profileResponse } = await getApiData(playerTag,setLoading);
 
       if (!chestResponse.data || !profileResponse.data) {
         throw new Error("Data not found");
