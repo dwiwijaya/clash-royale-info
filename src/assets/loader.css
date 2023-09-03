@@ -2,7 +2,7 @@
     display: block;
     --height-of-loader: 4px;
     --loader-color: #6ba8e5;
-    width: 90%;
+    width: 100%;
     height: var(--height-of-loader);
     border-radius: 30px;
     background-color: rgba(0,0,0,0.2);
