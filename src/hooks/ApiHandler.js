@@ -4,32 +4,28 @@ import getApiData from "../services/getApiData";
 const useApiData = (playerTag,setLoading) => {
   const [profileData, setProfileData] = useState(null);
   const [chestData, setChestData] = useState(null);
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
-
+  const [response, setResponse] = useState(null);
   const fetchApiData = async () => {
-    setError(null);
-    setChestData(null);
-    setProfileData(null);
 
     if (!playerTag) {
-      setError("Player tag is required.");
+      setResponse("Player tag is required.");
       return;
     }
 
     try {
       const { chestResponse, profileResponse } = await getApiData(playerTag,setLoading);
 
-      if (!chestResponse.data || !profileResponse.data) {
-        throw new Error("Data not found");
-      }
+      // if (!chestResponse.data || !profileResponse.data) {
+      //    throw new Error("Player not found");
+      // }
+
       localStorage.setItem("tagname", playerTag);
 
       setChestData(chestResponse.data.items);
       setProfileData(profileResponse.data);
-      setSuccess("Data found!");
+      setResponse(true);
     } catch (error) {
-      setError(error.message);
+      setResponse(false);
     }
   };
 
@@ -39,7 +35,7 @@ const useApiData = (playerTag,setLoading) => {
     }
   }, [playerTag]);
 
-  return { profileData, chestData, error, success, fetchApiData };
+  return { profileData, chestData, response, fetchApiData };
 };
 
 export default useApiData;

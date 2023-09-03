@@ -4,7 +4,7 @@ import Setting from "../pages/setting";
 import Profile from "../pages/profile";
 import Chests from "../pages/chests";
 
-const AppRoutes = ({ fetchApiData, chestData, profileData, playerTag, setPlayerTag, error, success }) => {
+const AppRoutes = ({ fetchApiData, chestData, profileData, playerTag, setPlayerTag, response }) => {
   return (
     <Routes>
       <Route path="/" element={<Chests upchests={chestData} />} />
@@ -16,8 +16,7 @@ const AppRoutes = ({ fetchApiData, chestData, profileData, playerTag, setPlayerT
             playerTag={playerTag}
             setPlayerTag={setPlayerTag}
             fetchApiData={fetchApiData}
-            error={error}
-            success={success}
+            response={response}
           />
         }
       />

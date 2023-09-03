@@ -1,23 +1,29 @@
 import React from "react";
 
-const Settings = ({ playerTag, setPlayerTag, fetchApiData,error,success  }) => {
+const Settings = ({ playerTag, setPlayerTag, fetchApiData, response }) => {
   return (
     <div>
       <div className="d-flex gap-2 mb-4">
         <input
-        style={{fontSize : "smaller",letterSpacing : ".4px"}}
+          style={{ fontSize: "smaller", letterSpacing: ".4px" }}
           className="form-control"
           type="text"
           value={playerTag}
-          onChange={(e) => setPlayerTag(e.target.value)}
+          onChange={(e) =>
+            setPlayerTag(e.target.value.replace(/[^a-zA-Z0-9#]/g, "").toUpperCase())
+          }
           placeholder="Enter Player Tag"
         />
         <button className="btn-cr" onClick={fetchApiData}>
           Check
         </button>
       </div>
-      {error && <p className="text-danger">{error}</p>}
-      {success && <p className="text-white">{success}</p>}
+      <p className="text-white">
+        <i
+          className={`fa-solid fa-circle-${response ? "check" : "exclamation"}`}
+        ></i>
+        &nbsp; Account {response ? "Found" : "Not Found"} !
+      </p>
     </div>
   );
 };
