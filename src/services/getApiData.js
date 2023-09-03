@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const getApiData = async (playerTag,setLoading) => {
+const getApiData = async (playerTag, setLoading) => {
   console.log(encodeURIComponent(
     playerTag
   ));
@@ -11,17 +11,18 @@ const getApiData = async (playerTag,setLoading) => {
     playerTag
   )}`;
 
+  setLoading(true);
   try {
     const [chestResponse, profileResponse] = await axios.all([
       axios.get(chestUrl),
       axios.get(profileUrl),
     ]);
-    
     setLoading(false);
-
     return { chestResponse, profileResponse };
   } catch (error) {
-    throw new Error(error.message);
+    throw new Error(error.response.data.error);
+  } finally {
+    setLoading(false)
   }
 };
 

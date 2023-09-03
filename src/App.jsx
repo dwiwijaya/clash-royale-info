@@ -9,13 +9,12 @@ function App() {
   const [playerTag, setPlayerTag] = useState(
     localStorage.getItem("tagname") || ""
   );
-  const [isloading, setLoading] = useState(true);
+  const [isloading, setLoading] = useState(false);
 
   const {
     profileData,
     chestData,
-    error,
-    success,
+    response,
     fetchApiData,
   } = useApiData(playerTag,setLoading); // Use the hook
 
@@ -30,8 +29,7 @@ function App() {
           profileData={profileData}
           playerTag={playerTag}
           setPlayerTag={setPlayerTag}
-          success={success}
-          error={error}
+          response={response}
         />
       </main>
     </div>
