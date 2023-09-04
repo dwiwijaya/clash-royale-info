@@ -164,3 +164,9 @@ body {
 .link:active,.link:hover{
   scale: 1.05;
 }
+.input-tag{
+  transition: .2s ease-out;
+}
+.input-tag:focus{
+  box-shadow: 1px 2px  #ace7ffba;
+}

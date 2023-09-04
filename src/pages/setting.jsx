@@ -6,7 +6,7 @@ const Settings = ({ playerTag, setPlayerTag, fetchApiData, response }) => {
       <div className="d-flex gap-2 mb-4">
         <input
           style={{ fontSize: "smaller", letterSpacing: ".4px" }}
-          className="form-control"
+          className="form-control input-tag"
           type="text"
           value={playerTag}
           onChange={(e) =>
