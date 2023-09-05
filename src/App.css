@@ -1,5 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --secondary-color: #6ba8e5;
+}
 body {
   background-color: #001c31;
 }
@@ -58,6 +61,7 @@ body {
 }
 .chest-img {
   width: 50%;
+  filter: drop-shadow(2px 2px #222);
 }
 .order {
   position: absolute;
@@ -69,8 +73,9 @@ body {
 .navbar {
 }
 .link {
-  color: #61dafbaa !important;
+  color: #61dafbaa !important;                   
   transition: .1s ease-out;
+  text-shadow: 1px 1px #000;
 }
 .active,
 .active:hover {
@@ -110,6 +115,7 @@ body {
   scale: 0.95;
 }
 .player-detail {
+  white-space: nowrap;
   font-size: 14px;
   background: #2b2b2b61;
   border-radius: 10px;
@@ -144,8 +150,12 @@ body {
   background-color: #eaedff;
 }
 .stat-label {
-  color: #093eda;
-  font-size: 9px;
+  z-index: 100;
+  color: #ace7ffba;
+  text-align: left;
+  font-family: 'Lalezar', cursive;
+  text-shadow: .5px .5px black;
+
 }
 .stat-input {
   background-color: #c3c5dc !important;
@@ -169,4 +179,59 @@ body {
 }
 .input-tag:focus{
   box-shadow: 1px 2px  #ace7ffba;
+}
+.rounded-hr {
+  height: 4px; /* Atur tinggi garis sesuai kebutuhan */
+  background-color: #facc01; /* Atur warna sesuai kebutuhan */
+  border: none;
+  border-radius: 5px; /* Ini akan membuat tepi garis bulat */
+  opacity: 100;
+  box-shadow: 0.8px 1px #212121;
+}
+.orange-hr{
+  border-top:1px solid #facc01 ;
+  opacity: 100;
+}
+.desc{
+  font-family: 'Lalezar', cursive;
+  color: #afd2df;
+  line-height: 1.2;
+  text-shadow: 1px 1px #000;
+}
+.text-shadow{
+  text-shadow: 1px 2px #000;
+}
+.leg-trophy{
+  min-width: 8rem;
+    min-height: 3.55rem;
+    /* box-shadow: 1px 1px #fff; */
+    align-items: center;
+    border-bottom: 1px solid #ffffff4a;
+}
+.leg-trophy img{
+  position: absolute;
+    left: 10px;
+    opacity: 100;
+    z-index: 10;
+    width: 40px;
+}
+.leg-trophy .player-detail{
+  border-top: 1px solid #000000ad;
+  padding: .3rem;
+  color: #facc01;
+}
+.glass-effect{
+  margin: 3px;
+  position: absolute;
+  height: 42%;
+  width: 96%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  background: linear-gradient(to right, #ffffff24, rgb(255 255 255 / 8%));
+
+}
+.detail-content{
+  z-index: 100;
+  position: relative;
 }

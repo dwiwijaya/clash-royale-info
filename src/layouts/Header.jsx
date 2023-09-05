@@ -5,7 +5,7 @@ const Header = () => {
         <header>
             <div className="d-flex  mt-3 justify-content-center align-items-center">
             <img src="/crown.png" alt="" height={30} className="me-1" />
-            <h3 style={{color: "#ffcd34 "}} className="mb-0">Clash Royale Info</h3>
+            <h3 style={{color: "#ffcd34 ",textShadow:"1px 3px #000"}} className="mb-0">Clash Royale Info</h3>
             </div>
             <a
                 href="https://github.com/11Dwiwijaya"

@@ -1,5 +1,7 @@
 // PlayerProfile.js
 import React from "react";
+import PlayerDetail from "../components/PlayerDetail";
+import DetailSeparator from "../components/DetailSeparator";
 
 const PlayerProfile = (prop = null) => {
   let content = null;
@@ -7,14 +9,12 @@ const PlayerProfile = (prop = null) => {
   if (player !== null) {
     content = (
       <div className="text-center text-white">
-        <h4>{player.name}</h4>
-        <p style={{ fontSize: "smaller", color: "#6bb7f9" }}>{player.tag}</p>
+        <h4 style={{ textShadow: "1px 2px black" }}>{player.name}</h4>
+        <p style={{ fontSize: "smaller", color: "#6bb7f9", textShadow: "1px 1px 1px black" }}>{player.tag}</p>
         <div className="details">
+          <PlayerDetail content={player.expLevel} image={"/xp.png"} />
           <div className="player-detail">
-            <img src={"/xp.png"} alt="" width={20} /> &nbsp;
-            {player.expLevel}
-          </div>
-          <div className="player-detail">
+            <div className="glass-effect"></div>
             <div className="arena">
               <img
                 src={`/arenas/${player.arena["name"]
@@ -26,48 +26,26 @@ const PlayerProfile = (prop = null) => {
               <p className=" mb-0">{player.arena["name"]}</p>
             </div>
           </div>
-          <div className="player-detail">
-            <p className="m-0">Wins : {player.wins}</p>
-          </div>
-          <div className="player-detail">
-            <img src={"/trophy.png"} alt="" width={20} /> &nbsp;
-            <span className="m-0" style={{ color: "rgb(253 213 0)" }}>
-              {player.trophies}
-            </span>
-          </div>
+          <PlayerDetail content={player.wins} label={"Battles Won"} />
+          <PlayerDetail content={player.trophies} image={"/trophy.png"} />
         </div>
 
-        <div className="row mt-3 align-items-center">
-          <div className="col">
-            <hr />
-          </div>
-          <div className="col-4">
-            <h6 className="m-0">Stats Royale</h6>
-          </div>
-          <div className="col">
-            <hr />
+        <DetailSeparator title={"Legacy Best"} />
+        <div className="d-flex justify-content-center  mb-3">
+          <div className="relative player-detail leg-trophy">
+          <div className="glass-effect"></div>
+            <img src="/trophy.png" alt="" className="s" width={30} />
+            <div className="player-detail d-flex align-items-center ps-4 ms-4 mt-1 me-1">{player.bestTrophies}</div>
           </div>
         </div>
-       <div style={{borderRadius : "15px"}} className="card card-body stats mt-3 pb-3">
-        <div className="grid-stat">
-          <div className="text-start">
-            <small className="stat-label">battleCount</small>
-            <div className="stat-input"><p className="m-0">{player.battleCount}</p></div>
-          </div>
-          <div className="text-start">
-            <small className="stat-label">threeCrownWins</small>
-            <div className="stat-input">{player.threeCrownWins}</div>
-          </div>
-          <div className="text-start">
-            <small className="stat-label">Wins</small>
-            <div className="stat-input">{player.wins}</div>
-          </div>
-          <div className="text-start">
-            <small className="stat-label">Losses</small>
-            <div className="stat-input">{player.losses}</div>
-          </div>
+        <div className="desc mx-3">Your Best achievments from the old Trophy Road League</div>
+        <DetailSeparator title={"Stats Royale"} />
+        <div className="details">
+          <PlayerDetail content={player.battleCount} label={"Battles Count"} />
+          <PlayerDetail content={player.threeCrownWins} label={"3 Crown Wins"} />
+          <PlayerDetail content={player.wins} label={"Battles Won"} />
+          <PlayerDetail content={player.losses} label={"Battles Loss"} />
         </div>
-       </div>
       </div>
     );
   } else {

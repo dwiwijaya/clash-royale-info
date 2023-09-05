@@ -18,7 +18,7 @@ const Settings = ({ playerTag, setPlayerTag, fetchApiData, response }) => {
           Check
         </button>
       </div>
-      <p className="text-white">
+      <p className="text-white text-shadow">
         <i
           className={`fa-solid fa-circle-${response ? "check" : "exclamation"}`}
         ></i>
