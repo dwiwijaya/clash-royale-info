@@ -67,7 +67,7 @@ body {
   position: absolute;
   top: 50%;
   right: 40%;
-  text-shadow: 0px 2px 4px #000;
+  text-shadow: 0px 2px 4px #000,1px 2px #000;
   color: white;
 }
 .navbar {
