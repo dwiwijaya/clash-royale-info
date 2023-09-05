@@ -12,7 +12,7 @@ const Chest = ({ chestName, chestIndex }) => {
                 data-bs-placement="bottom"
                 data-bs-content="Bottom popover"
             />
-            <span className="order">
+            <span className="order text-shadow">
                 {chestIndex == 0 ? "Next" : "+" + chestIndex}
             </span>
         </div>
