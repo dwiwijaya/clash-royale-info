@@ -5,7 +5,7 @@ const DetailSeparator = ({ title }) => {
                 <hr className="rounded-hr"/>
             </div>
             <div className="col-5 col-md-2 p-0">
-                <h6 className="m-0">{title}</h6>
+                <h6 className="m-0 text-shadow">{title}</h6>
             </div>
             <div className="col">
                 <hr className="rounded-hr"/>
