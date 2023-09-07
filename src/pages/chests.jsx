@@ -14,7 +14,7 @@ const UpcomingChest = (props) => {
       </div>
     );
   } else {
-    content = <h3 className="text-white">Add your tag in Settings</h3>;
+    content = <h3 className="text-white text-shadow">Add your tag in Setting</h3>;
   }
 
   return content;

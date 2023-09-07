@@ -49,7 +49,7 @@ const PlayerProfile = (prop = null) => {
       </div>
     );
   } else {
-    content = <h3 className="text-white">Add your tag on Setting</h3>;
+    content = <h3 className="text-white text-shadow">Add your tag on Setting</h3>;
   }
   return content;
 };
