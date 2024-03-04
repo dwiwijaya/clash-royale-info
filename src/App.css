@@ -14,7 +14,7 @@ body {
 }
 .App {
   min-width: 50vw;
-  background: url("/bg.png");
+  background: url("/bg.webp");
   background-size: contain;
   box-shadow: 0 1rem 3rem #114a95b5 !important;
   padding: 1rem !important;
@@ -107,7 +107,7 @@ body {
   border-radius: 15px;
 }
 .btn-cr {
-  background: url("/button.png");
+  background: url("/button.webp");
   background-size: cover;
   color: #5f3b03;
 }

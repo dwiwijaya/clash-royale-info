@@ -12,14 +12,14 @@ const PlayerProfile = (prop = null) => {
         <h4 style={{ textShadow: "1px 2px black" }}>{player.name}</h4>
         <p style={{ fontSize: "smaller", color: "#6bb7f9", textShadow: "1px 1px 1px black" }}>{player.tag}</p>
         <div className="details">
-          <PlayerDetail content={player.expLevel} image={"/xp.png"} />
+          <PlayerDetail content={player.expLevel} image={"/xp.webp"} />
           <div className="player-detail">
             <div className="glass-effect"></div>
             <div className="arena">
               <img
                 src={`/arenas/${player.arena["name"]
                   .toLowerCase()
-                  .replace(/\s+/g, "-")}.png`}
+                  .replace(/\s+/g, "-")}.webp`}
                 alt={player.arena["name"]}
                 className="arena-image"
               />
@@ -27,14 +27,14 @@ const PlayerProfile = (prop = null) => {
             </div>
           </div>
           <PlayerDetail content={player.wins} label={"Battles Won"} />
-          <PlayerDetail content={player.trophies} image={"/trophy.png"} />
+          <PlayerDetail content={player.trophies} image={"/trophy.webp"} />
         </div>
 
         <DetailSeparator title={"Legacy Best"} />
         <div className="d-flex justify-content-center  mb-3">
           <div className="relative player-detail leg-trophy">
           <div className="glass-effect"></div>
-            <img src="/trophy.png" alt="" className="s" width={30} />
+            <img src="/trophy.webp" alt="" className="s" width={30} />
             <div className="player-detail d-flex align-items-center ps-4 ms-4 mt-1 me-1">{player.bestTrophies}</div>
           </div>
         </div>
