@@ -5,7 +5,7 @@ const Chest = ({ chestName, chestIndex }) => {
                 title={chestName}
                 src={`/chests/${chestName
                     .toLowerCase()
-                    .replace(/\s+/g, "-")}.png`}
+                    .replace(/\s+/g, "-")}.webp`}
                 alt={chestName}
                 className="chest-img"
                 data-bs-toggle="popover"
