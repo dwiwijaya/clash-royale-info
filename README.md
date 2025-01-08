@@ -8,6 +8,11 @@ This is a web application for Clash Royale players to track upcoming chests and 
 - **Profile View**: View detailed account information, including stats and achievements.
 - **Interactive Interface**: User-friendly layout for easy navigation.
 
+## Screenshot
+Here’s a preview of the website:
+
+![Clash Royale Info Website Screenshot](/assets/screenshot.png)
+
 ## Technologies Used
 
 - **React**: Frontend framework for building the user interface.
